@@ -57,10 +57,52 @@
       tree = "${ls} --tree";
       la = "${ls} --all";
       k = "kubectl";
-      c = "clear";
       shell = "nix-shell --run \"zsh\"";
       ":wq" = "exit";
       reload = "~/afs/setup.sh";
+
+      # git
+      ga="git add";
+      gb="git branch -r";
+      gc="source ~/.config/script/clone.sh";
+      gcc="git clone";
+      gd="git tag -d";
+      gdff="git diff";
+      gf="git fetch";
+      gl="git log";
+      gm="git commit -m";
+      gmm="git commit -m \"commit pour demacia\"";
+      gma="git commit --amend";
+      gp="git push";
+      gpf="git push --force-with-lease";
+      gpll="git pull";
+      gpt="git push --fol";
+      gs="git status";
+      gss="git switch";
+      gt="git tag -ma";
+      gtt="git push --tags";
+      gur="source ~/.config/script/update_repo.sh";
+      pci="pre-commit install";
+
+      # make projects
+      m="make";
+      mt="make -j 10";
+      tg="gcc git@gitlab.cri.epita.fr:lenny.chiadmi-delage/grrrrrrrrrrrrr.git && cd grrrrrrrrrrrrr && pci";
+      lbc="libtoolize && ./bootstrap && ./configure";
+      lbcm="libtoolize && ./bootstrap && ./configure && make -j 12";
+      lbcg="libtoolize && ./bootstrap && ./configure CXXFLAGS=-g";
+      lbcgm="libtoolize && ./bootstrap && ./configure CXXFLAGS=-g && make -j 12";
+
+      # usefull for glouglou
+      itar="mv ~/Downloads/*.tar . && tar -xf *.tar && rm *.tar";
+      utar="source ~/.config/script/utar.sh";
+      ka="source ~/.config/script/ka.sh";
+
+      # term 
+      c="clear";
+      ccc="cd";
+      cl="clear && ls -l";
+      cli="clear && ls -la";
     };
 
     initExtra = ''
